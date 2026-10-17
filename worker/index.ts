@@ -9,6 +9,13 @@ export default {
     const url = new URL(request.url)
 
     if (url.pathname == '/api/tile') {
+      if (request.method !== 'GET') {
+        return new Response(null, {
+          status: 405,
+          headers: { Allow: 'GET', 'Cache-Control': 'no-store' },
+        })
+      }
+
       try {
         const {
           coords: [x, y, zoom],
