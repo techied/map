@@ -4,47 +4,52 @@
   "main": "worker/index.ts",
   "compatibility_date": "2026-10-06",
   "assets": {
-    "not_found_handling": "single-page-application",
+    "not_found_handling": "single-page-application"
   },
   "cache": {
-    "enabled": true,
+    "enabled": true
   },
   "observability": {
     "enabled": true,
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 0.1
+    },
     "traces": {
       "enabled": true,
-    },
+      "head_sampling_rate": 0.1
+    }
   },
   "upload_source_maps": true,
   "routes": [
     {
       "pattern": "map.techied.dev",
-      "custom_domain": true,
-    },
+      "custom_domain": true
+    }
   ],
   "kv_namespaces": [
     {
       "binding": "TILES_SESSION_STORE",
-      "id": "b6b61a655de64337b12319da044c0bb6",
-    },
+      "id": "b6b61a655de64337b12319da044c0bb6"
+    }
   ],
   "ratelimits": [
     {
       "name": "TILE_BURST_LIMITER",
       "namespace_id": "1001",
-      "simple": { "limit": 50, "period": 10 },
+      "simple": { "limit": 50, "period": 10 }
     },
     {
       "name": "TILE_MINUTE_LIMITER",
       "namespace_id": "1002",
-      "simple": { "limit": 180, "period": 60 },
-    },
+      "simple": { "limit": 180, "period": 60 }
+    }
   ],
   "secrets": {
-    "required": ["GOOGLE_MAPS_API_KEY", "META_API_KEY"],
+    "required": ["GOOGLE_MAPS_API_KEY", "META_API_KEY"]
   },
   "placement": {
     "mode": "targeted",
-    "hostname": "api.meta.ai",
-  },
+    "hostname": "api.meta.ai"
+  }
 }
