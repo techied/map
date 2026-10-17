@@ -28,6 +28,18 @@
       "id": "b6b61a655de64337b12319da044c0bb6",
     },
   ],
+  "ratelimits": [
+    {
+      "name": "TILE_BURST_LIMITER",
+      "namespace_id": "1001",
+      "simple": { "limit": 50, "period": 10 },
+    },
+    {
+      "name": "TILE_MINUTE_LIMITER",
+      "namespace_id": "1002",
+      "simple": { "limit": 180, "period": 60 },
+    },
+  ],
   "secrets": {
     "required": ["GOOGLE_MAPS_API_KEY", "META_API_KEY"],
   },

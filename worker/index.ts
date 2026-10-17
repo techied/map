@@ -1,6 +1,7 @@
 import { getParams } from './params.ts'
 import { getTile } from './tile.ts'
 import { segmentImage } from './segment.ts'
+import { checkTileRateLimit } from './rate-limit.ts'
 import { recordsOfKind } from '@meta-sam/parser'
 import type { MaskTile } from '../shared/mask-tile.ts'
 
@@ -21,6 +22,9 @@ export default {
           coords: [x, y, zoom],
           prompt,
         } = getParams(url.searchParams)
+        const limited = await checkTileRateLimit(request)
+        if (limited) return limited
+
         const tile = await getTile(x, y, zoom)
         const result = await segmentImage(prompt, tile)
         return Response.json(
