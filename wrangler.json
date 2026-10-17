@@ -21,6 +21,10 @@
       "head_sampling_rate": 0.1
     }
   },
+  "limits": {
+    "cpu_ms": 750,
+    "subrequests": 50
+  },
   "upload_source_maps": true,
   "routes": [
     {
