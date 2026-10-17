@@ -1,0 +1,269 @@
+.map-app {
+  position: relative;
+  width: 100%;
+  height: 100dvh;
+}
+
+.map-controls {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  z-index: 1;
+  width: 420px;
+  max-width: calc(100% - 48px);
+  padding: 20px;
+  border: 1px solid #ffffffc9;
+  border-radius: 24px;
+  background: #fffffff5;
+  box-shadow:
+    0 12px 48px #102c2529,
+    0 2px 8px #102c2514;
+  backdrop-filter: blur(20px);
+}
+
+.map-controls label {
+  display: block;
+  margin-bottom: 9px;
+  color: #4e6056;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.map-controls-row {
+  display: flex;
+  gap: 8px;
+}
+
+.map-query-input {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+  padding-left: 13px;
+  border: 1px solid #dce4de;
+  border-radius: 12px;
+  background: #f5f7f5;
+  transition:
+    border-color 150ms,
+    box-shadow 150ms;
+}
+
+.map-query-input:focus-within {
+  border-color: #398665;
+  box-shadow: 0 0 0 3px #3986651a;
+}
+
+.map-query-input svg {
+  flex-shrink: 0;
+  width: 17px;
+  height: 17px;
+  color: #85958b;
+}
+
+.map-controls input {
+  width: 100%;
+  min-width: 0;
+  padding: 13px 10px;
+  border: 0;
+  border-radius: 12px;
+  outline: none;
+  color: #243b2f;
+  background: transparent;
+  font-size: 14px;
+}
+
+.map-controls input::placeholder {
+  color: #88958e;
+}
+
+.map-controls button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 12px 14px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  color: #fff;
+  background: #246448;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background 150ms,
+    border-color 150ms,
+    box-shadow 150ms;
+}
+
+.map-controls button[type='submit'] {
+  box-shadow:
+    0 2px 4px #1d51331a,
+    inset 0 1px #ffffff1a;
+}
+
+.map-controls button[type='submit']:hover:not(:disabled) {
+  background: #194f37;
+}
+
+.map-controls button svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.sample-prompts {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+}
+
+.sample-prompts-scroll {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+  gap: 6px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+  padding: 4px;
+  margin-block: -4px;
+}
+
+.sample-prompts-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.map-controls .sample-prompt {
+  flex-shrink: 0;
+  gap: 5px;
+  padding: 6px 9px;
+  border-color: #e2e8e2;
+  border-radius: 999px;
+  color: #5b7062;
+  background: #fff;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.map-controls .sample-prompt:hover,
+.map-controls .sample-prompt[aria-pressed='true'] {
+  border-color: #a9cbb6;
+  color: #246448;
+  background: #edf5ef;
+}
+
+.map-controls .sample-scroll-button {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border-color: #e2e8e2;
+  border-radius: 50%;
+  color: #246448;
+  background: #f5f7f5;
+}
+
+.map-controls .sample-scroll-button:hover:not(:disabled) {
+  border-color: #a9cbb6;
+  background: #edf5ef;
+}
+
+.map-controls button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.map-controls button:focus-visible {
+  outline: 2px solid #398665;
+  outline-offset: 2px;
+}
+
+.mask-error {
+  margin: 16px 0 0;
+  padding: 10px 12px;
+  border: 1px solid #fee4e2;
+  border-radius: 10px;
+  color: #b42318;
+  background: #fff5f4;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.location-control,
+.github-control {
+  position: relative;
+  margin: 10px;
+}
+
+.location-button,
+.github-link {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  border-radius: 2px;
+  color: #666;
+  background: #fff;
+  box-shadow: 0 1px 4px #0005;
+  cursor: pointer;
+}
+
+.location-button:hover,
+.github-link:hover {
+  color: #333;
+}
+
+.location-button:focus-visible,
+.github-link:focus-visible {
+  outline: 2px solid #2359d1;
+  outline-offset: 2px;
+}
+
+.location-button:disabled {
+  color: #aaa;
+  cursor: default;
+}
+
+.location-error {
+  position: absolute;
+  right: 48px;
+  bottom: 0;
+  width: 240px;
+  max-width: calc(100vw - 80px);
+  margin: 0;
+  padding: 12px;
+  border-radius: 4px;
+  color: #b42318;
+  background: #fff;
+  box-shadow: 0 1px 4px #0005;
+  font:
+    13px/1.5 system-ui,
+    sans-serif;
+}
+
+@media (max-width: 480px) {
+  .map-controls {
+    top: 12px;
+    left: 12px;
+    max-width: calc(100% - 24px);
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .map-controls button[type='submit'] {
+    padding-inline: 12px;
+  }
+
+  .map-controls button[type='submit'] svg {
+    display: none;
+  }
+
+  .map-controls .sample-scroll-button {
+    display: none;
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "map",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-10-06",
+  "assets": {
+    "not_found_handling": "single-page-application",
+  },
+  "cache": {
+    "enabled": true,
+  },
+  "observability": {
+    "enabled": true,
+    "traces": {
+      "enabled": true,
+    },
+  },
+  "upload_source_maps": true,
+  "routes": [
+    {
+      "pattern": "map.techied.dev",
+      "custom_domain": true,
+    },
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "TILES_SESSION_STORE",
+      "id": "b6b61a655de64337b12319da044c0bb6",
+    },
+  ],
+  "secrets": {
+    "required": ["GOOGLE_MAPS_API_KEY", "META_API_KEY"],
+  },
+  "placement": {
+    "mode": "targeted",
+    "hostname": "api.meta.ai",
+  },
+}

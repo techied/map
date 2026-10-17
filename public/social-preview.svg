@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="background" x2="1" y2="1">
+      <stop stop-color="#123b2c" />
+      <stop offset="1" stop-color="#246448" />
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0v48" fill="none" stroke="#b9e6be" stroke-opacity=".06" />
+    </pattern>
+    <clipPath id="map-clip">
+      <rect x="668" y="68" width="460" height="494" rx="36" />
+    </clipPath>
+  </defs>
+  <rect width="1200" height="630" fill="url(#background)" />
+  <rect width="1200" height="630" fill="url(#grid)" />
+  <g transform="translate(76 94) scale(1.25)" fill="none">
+    <rect width="64" height="64" rx="16" fill="#ffffff" fill-opacity=".08" />
+    <path d="M22 12h-6a4 4 0 0 0-4 4v6m30-10h6a4 4 0 0 1 4 4v6M12 42v6a4 4 0 0 0 4 4h6m30-10v6a4 4 0 0 1-4 4h-6" stroke="#f2f8ef" stroke-width="4" stroke-linecap="round" />
+    <path d="m32 19 13 13-13 13-13-13Z" fill="#b9e6be" />
+    <path d="m32 19 13 13H32Z" fill="#ff806f" />
+  </g>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <text x="72" y="283" fill="#f2f8ef" font-size="80" font-weight="700" letter-spacing="-3">SAM Map</text>
+    <text x="76" y="348" fill="#c1dfcd" font-size="28">Explore satellite imagery with AI.</text>
+    <text x="76" y="395" fill="#c1dfcd" font-size="22">Find it. Highlight it. See it differently.</text>
+    <rect x="76" y="451" width="97" height="37" rx="18.5" fill="#ffffff" fill-opacity=".08" />
+    <rect x="183" y="451" width="70" height="37" rx="18.5" fill="#ffffff" fill-opacity=".08" />
+    <rect x="263" y="451" width="74" height="37" rx="18.5" fill="#ffffff" fill-opacity=".08" />
+    <g fill="#d7ebdd" font-size="15" text-anchor="middle">
+      <text x="124.5" y="475">buildings</text>
+      <text x="218" y="475">trees</text>
+      <text x="300" y="475">pools</text>
+    </g>
+    <text x="76" y="562" fill="#91b69e" font-size="16" letter-spacing="1">map.techied.dev</text>
+  </g>
+  <rect x="668" y="68" width="460" height="494" rx="36" fill="#2d684c" />
+  <g clip-path="url(#map-clip)">
+    <g transform="rotate(-24 898 315)" stroke="#629878" stroke-width="2">
+      <path d="M573 38h222v145H573Zm257 0h136v145H830Zm171 0h185v145h-185ZM573 218h222v187H573Zm257 0h136v187H830Zm171 0h185v187h-185ZM573 440h222v183H573Zm257 0h136v183H830Zm171 0h185v183h-185Z" fill="#397855" />
+      <g fill="#a4c09b" stroke="#cae1b4" stroke-opacity=".3">
+        <rect x="605" y="70" width="62" height="77" rx="5" />
+        <rect x="686" y="70" width="72" height="40" rx="5" />
+        <rect x="686" y="127" width="72" height="29" rx="4" />
+        <rect x="852" y="65" width="91" height="44" rx="5" />
+        <rect x="852" y="127" width="91" height="32" rx="4" />
+        <rect x="1023" y="70" width="96" height="90" rx="6" />
+        <rect x="607" y="245" width="65" height="133" rx="5" />
+        <rect x="1019" y="242" width="64" height="55" rx="5" />
+        <rect x="1019" y="315" width="96" height="64" rx="5" />
+        <rect x="605" y="466" width="70" height="102" rx="5" />
+        <rect x="694" y="466" width="71" height="49" rx="5" />
+        <rect x="852" y="465" width="92" height="96" rx="6" />
+        <rect x="1024" y="468" width="70" height="93" rx="5" />
+      </g>
+      <g fill="#ff806f" stroke="#ffc2b1" stroke-width="2">
+        <path d="M699 245h70v42h-26v91h-44Z" />
+        <rect x="851" y="244" width="93" height="58" rx="5" />
+        <rect x="851" y="321" width="93" height="58" rx="5" />
+      </g>
+      <path d="M808 0v660M979 0v660M560 200h670M560 422h670" fill="none" stroke="#9fbe9e" stroke-opacity=".4" stroke-width="3" stroke-dasharray="8 12" />
+    </g>
+    <rect x="668" y="68" width="460" height="494" fill="#102f22" fill-opacity=".1" />
+    <path d="M766 185h-24a10 10 0 0 0-10 10v24m298-34h24a10 10 0 0 1 10 10v24M732 409v24a10 10 0 0 0 10 10h24m298-34v24a10 10 0 0 1-10 10h-24" fill="none" stroke="#f2f8ef" stroke-width="5" stroke-linecap="round" />
+  </g>
+  <rect x="668" y="68" width="460" height="494" rx="36" fill="none" stroke="#b9e6be" stroke-opacity=".2" />
+</svg>
